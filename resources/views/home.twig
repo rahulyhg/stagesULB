@@ -1,42 +1,93 @@
 {% extends 'templates/app.twig' %}
 
 {% block content %}
-	Prochaine garde prévue le 01/01/2017 à l'Hôpital Saint-Pierre au poste Porte
+        Prochaine garde prévue le 01/01/2017 à l'Hôpital Saint-Pierre au poste Porte
 
-	{# ici sont mises les dernières échanges de garde auxquels l'user a participé #}
-	<h5>Echanges de garde personnels</h5>
-	<table class="bordered">
-		<thead>
-		<tr>
-			<th>Statut</th>
-			<th>Type</th>
-			<th>Item Pr</tr>
-		</ice</th>
-		thead>
+        {# ici sont mises les dernières échanges de garde auxquels l'user a participé #}
+        <h5>Echanges de garde personnels</h5>
+        <table class="bordered">
+            <thead>
+            <tr>
+                <th>Statut</th>
+                <th>Type</th>
+                <th>Hôpital</th>
+                <th>Date</th>
+                <th>Avec</th>
+                <th>Commentaires</th>
+                <th>Action</th>
+            </tr>
+            </thead>
 
-		<tbody>
-		<tr class="green accent-4">
-			<td>Accepté</td>
-			<td>Don de garde</td>
-			<td>$0.87</td>
-		</tr>
-		<tr class="orange lighten-3">
-			<td>En attente</td>
-			<td>Echange de garde</td>
-			<td>$3.76</td>
-		</tr>
-		<tr class="red lighten-1">
-			<td>Refusé</td>
-			<td>Reprise de garde</td>
-			<td>$7.00</td>
-		</tr>
-		<tr class="orange lighten-3">
-			<td>En attente</td>
-			<td>Lollipop</td>
-			<td>$7.00</td>
-		</tr>
-		</tbody>
-	</table>
+            <tbody>
+            <tr class="green accent-4">
+                <td>Accepté</td>
+                <td>Don</td>
+                <td>Saint-Pierre</td>
+                <td>12/06/2017</td>
+                <td>Marcel Proust</td>
+                <td>Merci</td>
+            </tr>
+            <tr class="orange lighten-3">
+                <td>En attente</td>
+                <td>Echange</td>
+                <td>Saint-Pierre</td>
+                <td>19/06/2017</td>
+                <td>Jean de la Fontaine</td>
+                <td>Pas de problème pour que je la prenne :)</td>
+                <td><a class="waves-effect waves-light btn">Répondre</a></td>
+            </tr>
+            <tr class="red lighten-1">
+                <td>Refusé</td>
+                <td>Reprise</td>
+                <td>Saint-Pierre</td>
+                <td>24/06/2017</td>
+                <td>Marcel Proust</td>
+                <td>Désolé, on me l'a déjà reprise !</td>
+            </tr>
+            <tr class="orange lighten-3">
+                <td>En attente</td>
+                <td>Echange</td>
+                <td>Saint-Pierre</td>
+                <td>24/06/2017</td>
+                <td>Victor Hugo</td>
+            </tr>
+            </tbody>
+        </table>
 
+
+    {# ici sont mises les notifications #}
+    <h5>Notifications</h5>
+    <table class="bordered">
+        <thead>
+        <tr>
+            <th>Hôpital</th>
+            <th>Date</th>
+            <th>Notification</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>Saint-Pierre</td>
+            <td>13/06/2017 00h15</td>
+            <td>Michel Sapin a repris la garde de Cécile Duflot du 26/06/2017 au poste Porte</td>
+        </tr>
+        <tr class="orange lighten-3">
+            <td>Erasme</td>
+            <td>13/06/2017 00h15</td>
+            <td>Prochain choix de garde le 12/06/2017 à 8h30 à l'auditoire O</td>
+        </tr>
+        <tr>
+            <td>Saint-Pierre</td>
+            <td>12/06/2017 16h15</td>
+            <td>Cécile Duflot offre sa garde du 26/06/2017 au poste Porte</td>
+        </tr>
+        <tr class="light-blue lighten-4">
+            <td>Ambroise Paré</td>
+            <td>13/06/2017 00h15</td>
+            <td>Le choix du garde du 26/06/2017 au 23/07/2017 a été mis en ligne</td>
+        </tr>
+        </tbody>
+    </table>
 
 {% endblock %}
