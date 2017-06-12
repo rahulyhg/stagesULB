@@ -2,7 +2,6 @@
 use App\Middleware\GuestMiddleware;
 use App\Middleware\AuthMiddleware;
 
-
 $app->get('/','HomeController:index')->setName('home');
 
 $app->group('',function () {

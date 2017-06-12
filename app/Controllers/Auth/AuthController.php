@@ -6,7 +6,6 @@ use App\Models\User;
 use App\Controllers\Controller;
 use Respect\Validation\Validator as v;
 
-
 class AuthController extends Controller
 {
 	public function getSignOut($request,$response)
