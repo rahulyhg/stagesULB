@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="UTF-8">
+	<title>SlimSkel</title>
+	<link rel="stylesheet" href="/assets/css/app.css">
+</head>
+<body>
+	{% include 'templates/partials/navigation.twig' %}
+	<div class="content">
+		{% include 'templates/partials/flash.twig' %}
+		{% block content %}
+		    
+		{% endblock %}
+	</div>
+</body>
+</html>

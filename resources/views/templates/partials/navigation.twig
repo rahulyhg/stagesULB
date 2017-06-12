@@ -1,0 +1,17 @@
+<nav>
+  <div>
+    <a class="navbar-brand" href="{{ path_for('home') }}">SlimSkel</a>
+  </div>
+  <div>
+    <a href="#">{{ auth.user.name }}</a>
+    <ul class="nav navbar-nav navbar-right">
+    {% if auth.check %}
+      <li><a href="{{ path_for('auth.password.change') }}">Change Password</a></li>
+      <li><a href="{{ path_for('auth.signout') }}">Sign Out</a></li>
+    {% else %}
+      <li><a href="{{ path_for('auth.signin') }}">Sign In</a></li>
+      <li><a href="{{ path_for('auth.signup') }}">Sign Up</a></li>
+    {% endif %}
+    </ul>
+  </div>
+</nav>
