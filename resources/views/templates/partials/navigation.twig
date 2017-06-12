@@ -1,7 +1,9 @@
 <nav class="nav-extended">
   <div class="nav-wrapper">
     <a href="{{ path_for('home') }}" class="brand-logo">Stages ULB</a>
+      {% if auth.check %}
       <a href="#" data-activates="slide-out" class="button-collapse hospital"><i class="material-icons">business</i></a>
+      {% endif %}
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
         {% if auth.check %}
@@ -10,7 +12,7 @@
           <li><a href="{{ path_for('auth.signout') }}">Déconnexion</a></li>
         {% else %}
           <li><a href="{{ path_for('auth.signin') }}">Connexion</a></li>
-          <li><a href="{{ path_for('auth.signup') }}">Inscription</a></li>
+          <!--<li><a href="">Inscription</a></li>-->
         {% endif %}
     </ul>
     <ul class="side-nav" id="mobile-demo">
@@ -20,7 +22,7 @@
           <li><a href="{{ path_for('auth.signout') }}">Déconnexion</a></li>
         {% else %}
           <li><a href="{{ path_for('auth.signin') }}">Connexion</a></li>
-          <li><a href="{{ path_for('auth.signup') }}">Inscription</a></li>
+            <!--<li><a href="">Inscription</a></li>-->
         {% endif %}
     </ul>
   </div>
