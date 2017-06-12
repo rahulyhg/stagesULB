@@ -5,7 +5,7 @@
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
         {% if auth.check %}
-          <li class="nav__username">Georges MesFesses</li>
+          <li class="nav__username">Georges Dubreuil</li>
           <li><a href="{{ path_for('auth.password.change') }}">Profil</a></li>
           <li><a href="{{ path_for('auth.signout') }}">Déconnexion</a></li>
         {% else %}
@@ -15,7 +15,7 @@
     </ul>
     <ul class="side-nav" id="mobile-demo">
         {% if auth.check %}
-          <li class="nav__username">Georges MesFesses</li>
+            <li class="nav__username"><a href="#!">Georges Dubreuil</a></li>
           <li><a href="{{ path_for('auth.password.change') }}">Profil</a></li>
           <li><a href="{{ path_for('auth.signout') }}">Déconnexion</a></li>
         {% else %}
