@@ -1,42 +1,45 @@
 {% extends 'templates/app.twig' %}
 
 {% block content %}
-	Prochaine garde prévue le 01/01/2017 à l'Hôpital Saint-Pierre au poste Porte
+<div class="row">
+    <div class="col s6">
+        Prochaine garde prévue le 01/01/2017 à l'Hôpital Saint-Pierre au poste Porte
+    </div>
+    <div class="col s6">
+        {# ici sont mises les dernières échanges de garde auxquels l'user a participé #}
+        <h5>Echanges de garde personnels</h5>
+        <table class="bordered">
+            <thead>
+            <tr>
+                <th>Statut</th>
+                <th>Type</th>
+                <th>Item Pr</tr>
+            </ice</th>
+            </thead>
 
-	{# ici sont mises les dernières échanges de garde auxquels l'user a participé #}
-	<h5>Echanges de garde personnels</h5>
-	<table class="bordered">
-		<thead>
-		<tr>
-			<th>Statut</th>
-			<th>Type</th>
-			<th>Item Pr</tr>
-		</ice</th>
-		thead>
-
-		<tbody>
-		<tr class="green accent-4">
-			<td>Accepté</td>
-			<td>Don de garde</td>
-			<td>$0.87</td>
-		</tr>
-		<tr class="orange lighten-3">
-			<td>En attente</td>
-			<td>Echange de garde</td>
-			<td>$3.76</td>
-		</tr>
-		<tr class="red lighten-1">
-			<td>Refusé</td>
-			<td>Reprise de garde</td>
-			<td>$7.00</td>
-		</tr>
-		<tr class="orange lighten-3">
-			<td>En attente</td>
-			<td>Lollipop</td>
-			<td>$7.00</td>
-		</tr>
-		</tbody>
-	</table>
-
-
+            <tbody>
+            <tr class="green accent-4">
+                <td>Accepté</td>
+                <td>Don de garde</td>
+                <td>$0.87</td>
+            </tr>
+            <tr class="orange lighten-3">
+                <td>En attente</td>
+                <td>Echange de garde</td>
+                <td>$3.76</td>
+            </tr>
+            <tr class="red lighten-1">
+                <td>Refusé</td>
+                <td>Reprise de garde</td>
+                <td>$7.00</td>
+            </tr>
+            <tr class="orange lighten-3">
+                <td>En attente</td>
+                <td>Lollipop</td>
+                <td>$7.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}
