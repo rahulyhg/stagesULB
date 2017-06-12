@@ -15,6 +15,7 @@ nav {
 .nav__username {
     font-weight: 800;
     cursor: default;
+    padding: 0 1em;
 }
 
 .btn {
