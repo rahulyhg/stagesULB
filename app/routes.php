@@ -2,14 +2,12 @@
 use App\Middleware\GuestMiddleware;
 use App\Middleware\AuthMiddleware;
 
-$app->get('/login','AuthController:getSignIn')->setName('login');
-
 $app->group('',function () {
+    $this->get('/login','AuthController:getSignIn')->setName('auth.signin');
+    $this->post('/login','AuthController:postSignIn');
+
     //$this->get('/auth/signup','AuthController:getSignUp')->setName('auth.signup');
 	//$this->post('/auth/signup','AuthController:postSignUp');
-
-	$this->get('/auth/signin','AuthController:getSignIn')->setName('auth.signin');
-	$this->post('/auth/signin','AuthController:postSignIn');
 })->add(new GuestMiddleware($container));
 
 
