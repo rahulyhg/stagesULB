@@ -14,7 +14,10 @@ $app->group('',function () {
 
 $app->group('',function () {
     $this->get('/','HomeController:index')->setName('home');
-	$this->get('/auth/signout','AuthController:getSignOut')->setName('auth.signout');
+
+    $this->get('/profil','ProfileController:getProfile')->setName('profil');
+
+    $this->get('/auth/signout','AuthController:getSignOut')->setName('auth.signout');
 
 	$this->get('/auth/password/change','PasswordController:getChangePassword')->setName('auth.password.change');
 	$this->post('/auth/password/change','PasswordController:postChangePassword');

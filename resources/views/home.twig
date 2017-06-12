@@ -1,11 +1,11 @@
 {% extends 'templates/app.twig' %}
 
 {% block content %}
-        Prochaine garde prévue le 01/01/2017 à l'Hôpital Saint-Pierre au poste Porte
+     Prochaine garde prévue le 01/01/2017 à l'Hôpital Saint-Pierre au poste Porte
 
         {# ici sont mises les dernières échanges de garde auxquels l'user a participé #}
         <h5>Echanges de garde personnels</h5>
-        <table class="bordered">
+        <table class="bordered responsive-table">
             <thead>
             <tr>
                 <th>Statut</th>
@@ -57,7 +57,7 @@
 
     {# ici sont mises les notifications #}
     <h5>Notifications</h5>
-    <table class="bordered">
+    <table class="bordered responsive-table">
         <thead>
         <tr>
             <th>Hôpital</th>
@@ -89,5 +89,4 @@
         </tr>
         </tbody>
     </table>
-
 {% endblock %}
