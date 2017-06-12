@@ -1,1 +1,28 @@
-/* CSS */
+/*
+ * CSS
+ * Materialize custom
+ * Mobile first
+*/
+
+body {
+    font-family: "PT Sans", sans-serif;
+}
+
+nav {
+    background-color: #129cda;
+}
+
+.nav__username {
+    font-weight: 800;
+    cursor: default;
+}
+
+.btn {
+    background-color: #326380;
+}
+
+@media (min-width: 991px){
+    .brand-logo {
+        margin-left: .5em;
+    }
+}
