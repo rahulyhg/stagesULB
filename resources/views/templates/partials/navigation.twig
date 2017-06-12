@@ -1,17 +1,33 @@
-<nav>
-  <div>
-    <a class="navbar-brand" href="{{ path_for('home') }}">SlimSkel</a>
+<nav class="nav-extended">
+  <div class="nav-wrapper">
+    <a href="{{ path_for('home') }}" class="brand-logo">Stages ULB</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+        {% if auth.check %}
+          <li><a href="{{ path_for('auth.password.change') }}">Profil</a></li>
+          <li><a href="#">Notif</a></li>
+          <li><a href="{{ path_for('auth.signout') }}">Déconnexion</a></li>
+        {% else %}
+          <li><a href="{{ path_for('auth.signin') }}">Connexion</a></li>
+          <li><a href="{{ path_for('auth.signup') }}">Inscription</a></li>
+        {% endif %}
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+        {% if auth.check %}
+          <li><a href="{{ path_for('auth.password.change') }}">Profil</a></li>
+          <li><a href="#">Notif</a></li>
+          <li><a href="{{ path_for('auth.signout') }}">Déconnexion</a></li>
+        {% else %}
+          <li><a href="{{ path_for('auth.signin') }}">Connexion</a></li>
+          <li><a href="{{ path_for('auth.signup') }}">Inscription</a></li>
+        {% endif %}
+    </ul>
   </div>
-  <div>
-    <a href="#">{{ auth.user.name }}</a>
-    <ul class="nav navbar-nav navbar-right">
-    {% if auth.check %}
-      <li><a href="{{ path_for('auth.password.change') }}">Change Password</a></li>
-      <li><a href="{{ path_for('auth.signout') }}">Sign Out</a></li>
-    {% else %}
-      <li><a href="{{ path_for('auth.signin') }}">Sign In</a></li>
-      <li><a href="{{ path_for('auth.signup') }}">Sign Up</a></li>
-    {% endif %}
+  <div class="nav-content">
+    <ul class="tabs tabs-transparent">
+      <li class="tab"><a class="active" href="#test1">Test 1</a></li>
+      <li class="tab"><a href="#test2">Test 2</a></li>
+      <li class="tab"><a href="#test4">Test 3</a></li>
     </ul>
   </div>
 </nav>

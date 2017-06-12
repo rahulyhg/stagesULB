@@ -3,20 +3,20 @@
 {% block content %}
     <form action="{{ path_for('auth.password.change') }}" method="post">
         <div class="{{ errors.password_old ? ' error' : '' }}">
-            <label for="password_old">Current Password</label>
+            <label for="password_old">Mot de passe actuel</label>
             <input type="password" name="password_old" id="password_old">
             {% if errors.password_old %}
                 <span class="help">{{ errors.password_old | first }}</span>
             {% endif %}
         </div>
     	<div class="{{ errors.password ? ' error' : '' }}">
-    		<label for="password">Password</label>
+    		<label for="password">Nouveau mot de passe</label>
     		<input type="password" name="password" id="password">
             {% if errors.password %}
                 <span class="help">{{ errors.password | first }}</span>
             {% endif %}
     	</div>
-		<button type="submit" class="btn">Change Password</button>
+		<button type="submit" class="btn">Modifier</button>
         {{ csrf.field | raw }}
     </form>
 {% endblock %}
