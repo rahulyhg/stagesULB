@@ -78,6 +78,10 @@ $container['GardesController'] = function($container) {
     return new \App\Controllers\Hopital\GardesController($container);
 };
 
+$container['InfosController'] = function($container) {
+    return new \App\Controllers\Hopital\InfosController($container);
+};
+
 $container['AuthController'] = function($container) {
 	return new \App\Controllers\Auth\AuthController($container);
 };

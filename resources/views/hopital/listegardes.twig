@@ -1,5 +1,40 @@
 {% extends 'templates/app.twig' %}
 
 {% block content %}
+    <h4>Hôpital Saint-Pierre</h4><br>
+    <a class='dropdown-button btn' href='#' data-activates='periodes'>Périodes disponibles</a>
+    <ul id='periodes' class='dropdown-content'>
+        <li><a href="#!">12/06/2017 - 02/07/2017</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">03/07/2017 - 16/07/2017</a></li>
+    </ul>
 
+    <br><br><br>
+    <h5 class="center-align">Période 12/06/2017 - 02/07/2017</h5>
+    <table>
+        <thead>
+        <tr>
+            <th>Jour</th>
+            {# ces postes (et donc ces colonnes) varient selon les périodes et les hôpitaux ! #}
+            <th>HP</th>
+            <th>Porte</th>
+            <th>Salle</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>12/06/2017</td>
+            <td>Buzz Aldrin</td>
+            <td>Georges Washington</td>
+            <td>Donald Trump</td>
+        </tr>
+        <tr>
+            <td>13/06/2017</td>
+            <td>Rita Mitsouko</td>
+            <td>Jack Eventreur</td>
+            <td>Michel Picsou</td>
+        </tr>
+        </tbody>
+    </table>
 {% endblock %}
