@@ -26,6 +26,10 @@ nav {
     display: block !important;
 }
 
+.pagination li.active {
+    background-color: #607D8B;
+}
+
 .btn {
     background-color: #326380;
 }
