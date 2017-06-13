@@ -31,10 +31,11 @@
 
 <ul id="slide-out" class="side-nav">
     <li><a class="subheader"><i class="material-icons">business</i> Hôpitaux</a></li>
+    {% for i in 0..10 %}
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li>
-                <a class="collapsible-header">Hospi<i class="material-icons">arrow_drop_down</i></a>
+                <a class="collapsible-header">Hospi {{ i }}<i class="material-icons">arrow_drop_down</i></a>
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="/stagesULB/public/hopital/2/infos">Informations</a></li>
@@ -46,34 +47,5 @@
             </li>
         </ul>
     </li>
-    <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-            <li>
-                <a class="collapsible-header">Hospi2 <i class="material-icons">arrow_drop_down</i></a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="/stagesULB/public/hopital/2/infos">Informations</a></li>
-                        <li><a href="/stagesULB/public/hopital/2/gardes">Liste des gardes</a></li>
-                        <li><a href="/stagesULB/public/hopital/2/offres">Échanges<span
-                                        class="badge blue lighten-5">3</span></a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </li>
-    <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-            <li>
-                <a class="collapsible-header">Hospi3 <i class="material-icons">arrow_drop_down</i></a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="/stagesULB/public/hopital/2/infos">Informations</a></li>
-                        <li><a href="/stagesULB/public/hopital/2/gardes">Liste des gardes</a></li>
-                        <li><a href="/stagesULB/public/hopital/2/offres">Échanges<span
-                                        class="badge blue lighten-5">3</span></a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </li>
+    {% endfor %}
 </ul>
