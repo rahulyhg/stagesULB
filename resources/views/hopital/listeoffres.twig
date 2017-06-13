@@ -1,0 +1,75 @@
+{% extends 'templates/app.twig' %}
+
+{% block content %}
+
+    <h4>Echanges disponibles</h4>
+
+    <table class="bordered responsive-table">
+        <thead>
+        <tr>
+            <th>Jour</th>
+            <th>Type</th>
+            <th>Poste</th>
+            <th>Stagiaire</th>
+            <th>Commentaire</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>20/06/2017</td>
+            <td>Don</td>
+            <td>HP</td>
+            <td>Marcel Proust</td>
+            <td>la flemme d'y aller</td>
+            <td><a class="waves-effect waves-light btn">Prendre</a></td>
+        </tr>
+        <tr>
+            <td>19/06/2017</td>
+            <td>Echange</td>
+            <td>Porte</td>
+            <td>Jean de la Fontaine</td>
+            <td>J'ai exam le lendemain, svpppppp</td>
+            <td><a class="waves-effect waves-light btn">Prendre</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <h4>Echanges passés</h4>
+    <table class="bordered responsive-table">
+        <thead>
+        <tr>
+            <th>Statut</th>
+            <th>Jour</th>
+            <th>Type</th>
+            <th>Poste</th>
+            <th>Offerte par</th>
+            <th>Reprise par</th>
+            <th>Commentaire</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr class="red accent-2">
+            <td>Non reprise</td>
+            <td>10/06/2017</td>
+            <td>Echange</td>
+            <td>Porte</td>
+            <td>Jacques Prévert</td>
+            <td>Victor Hugo</td>
+            <td>Je vais manger chez ma grand-mère</td>
+        </tr>
+        <tr class="light-green accent-2">
+            <td>Reprise</td>
+            <td>10/06/2017</td>
+            <td>Echange</td>
+            <td>HP</td>
+            <td>Jacques Prévert</td>
+            <td>Arthur Rimbaud</td>
+            <td>J'ai un mariage</td>
+        </tr>
+    </table>
+
+
+{% endblock %}
