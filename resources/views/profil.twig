@@ -1,0 +1,47 @@
+{% extends 'templates/app.twig' %}
+
+{% block content %}
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s2">
+                    <input disabled id="prenom" value="Jean-Michel" type="text" class="validate">
+                    <label for="prenom">Prénom</label>
+                </div>
+                <div class="input-field col s2">
+                    <input disabled id="nom" value="Jarre" type="text" class="validate">
+                    <label for="nom">Nom</label>
+                </div>
+                <div class="input-field col s2">
+                    <input disabled id="id" value="12354" type="text" class="validate">
+                    <label for="id">Identifiant</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="telephone" type="text" class="validate" value="069812615615">
+                    <label for="telephone">Téléphone</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="email" type="email" class="validate" value="email@google.com">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="facebook" type="email" class="validate" value="https://www.facebook.com/martin">
+                    <label for="facebook">Profil Facebook (optionnel)</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="mdp" type="password" class="validate">
+                    <label for="mdp">Nouveau mot de passe</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <a class="waves-effect waves-light btn">Valider</a>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
