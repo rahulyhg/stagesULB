@@ -14,6 +14,7 @@ $app->group('',function () {
 
 $app->group('',function () {
     $this->get('/','HomeController:index')->setName('home');
+    $this->get('/api/hospitalList', 'APIController:hospitalList')->setName('api.hospitalList');
 
     $this->get('/profil','ProfileController:getProfile')->setName('user.profil');
 

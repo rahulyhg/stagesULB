@@ -82,6 +82,10 @@ $container['InfosController'] = function($container) {
     return new \App\Controllers\Hopital\InfosController($container);
 };
 
+$container['APIController'] = function($container) {
+    return new \App\Controllers\API\APIController($container);
+};
+
 $container['AuthController'] = function($container) {
 	return new \App\Controllers\Auth\AuthController($container);
 };

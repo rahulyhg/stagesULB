@@ -31,21 +31,52 @@
 
 <ul id="slide-out" class="side-nav">
     <li><a class="subheader"><i class="material-icons">business</i> Hôpitaux</a></li>
-    {% for i in 0..10 %}
-    <li class="no-padding">
+    <li id="rootHospital" class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li>
-                <a class="collapsible-header">Hospi {{ i }}<i class="material-icons">arrow_drop_down</i></a>
+                <a class="collapsible-header"><span class="hospital__name">Miaow</span><i class="material-icons">arrow_drop_down</i></a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="/stagesULB/public/hopital/2/infos">Informations</a></li>
-                        <li><a href="/stagesULB/public/hopital/2/gardes">Liste des gardes</a></li>
-                        <li><a href="/stagesULB/public/hopital/2/offres">Échanges<span
+                        <li><a class="hospital__info" href="">Informations</a></li>
+                        <li><a class="hospital__gardes" href="">Liste des gardes</a></li>
+                        <li><a class="hospital__echanges" href="">Échanges<span
                                         class="badge blue lighten-5">3</span></a></li>
                     </ul>
                 </div>
             </li>
         </ul>
     </li>
-    {% endfor %}
 </ul>
+
+<script>
+    var req = new XMLHttpRequest();
+    var rootHospital = document.getElementById('rootHospital');
+    var ul = document.getElementById('slide-out');
+
+    req.onreadystatechange = function(event) {
+        if (this.readyState === XMLHttpRequest.DONE) {
+            if (this.status === 200) {
+                var hospitals = JSON.parse(this.responseText);
+                for(var i = 0; i < hospitals.length; i++){
+                    var newElem = rootHospital.cloneNode(true);
+                    newElem.id = "hospital"+hospitals[i].id;
+                    newElem.querySelector('.hospital__name').innerHTML = hospitals[i].nom;
+                    newElem.querySelector('.hospital__info').href = "{{ base_url }}/hopital/"+hospitals[i].id+"/infos";
+                    ul.appendChild(newElem);
+                }
+                // Regen materialize
+                $('.collapsible').collapsible({
+                    accordion : true
+                });
+                // Delete root elem
+                rootHospital.outerHTML = "";
+            } else {
+                // oops
+                console.log("Status de la réponse: %d (%s)", this.status, this.statusText);
+            }
+        }
+    };
+
+    req.open('GET', '{{ base_url() }}/api/hospitalList', true);
+    req.send(null);
+</script>
