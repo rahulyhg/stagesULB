@@ -74,8 +74,8 @@ $container['ProfileController'] = function($container) {
     return new \App\Controllers\ProfileController($container);
 };
 
-$container['OfferController'] = function($container) {
-    return new \App\Controllers\Hopital\OfferController($container);
+$container['GardesController'] = function($container) {
+    return new \App\Controllers\Hopital\GardesController($container);
 };
 
 

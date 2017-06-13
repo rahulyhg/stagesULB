@@ -5,9 +5,9 @@ namespace App\Controllers\Hopital;
 use App\Models\User;
 use App\Controllers\Controller;
 
-class OfferController extends Controller
+class GardesController extends Controller
 {
-    public function getList($request,$response, $args)
+    public function getOfferList($request,$response, $args)
     {
         return $this->view->render($response,'hopital/listeoffres.twig');
     }
