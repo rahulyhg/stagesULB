@@ -15,7 +15,7 @@ $app->group('',function () {
 $app->group('',function () {
     $this->get('/','HomeController:index')->setName('home');
 
-    $this->get('/profil','ProfileController:getProfile')->setName('profil');
+    $this->get('/profil','ProfileController:getProfile')->setName('user.profil');
 
     $this->get('/hopital/{hopid}/offres', 'GardesController:getOfferList')->setName('hopital.offerslist');
     $this->get('/hopital/offre/{offreid}', 'GardesController:getOffer')->setName('hopital.viewoffer');

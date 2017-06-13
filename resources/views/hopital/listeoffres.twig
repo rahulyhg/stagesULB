@@ -1,8 +1,15 @@
 {% extends 'templates/app.twig' %}
 
 {% block content %}
-
-    <h4>Echanges disponibles</h4>
+    <nav class="inside-crumbs">
+        <div class="nav-wrapper">
+            <div class="col s12">
+                <a href="#!" class="breadcrumb">Hôpital Saint Pierre</a>
+                <a href="#!" class="breadcrumb">Échanges</a>
+            </div>
+        </div>
+    </nav>
+    <h5>Echanges disponibles</h5>
 
     <table class="bordered responsive-table">
         <thead>
@@ -36,7 +43,8 @@
         </tbody>
     </table>
     <br>
-    <h4>Echanges passés</h4>
+
+    <h5>Echanges passés</h5>
     <table class="bordered responsive-table">
         <thead>
         <tr>

@@ -13,12 +13,12 @@ nav {
 }
 
 .primary {
-    margin-top: 3em;
+    margin: .5em;
 }
 
 .nav__username {
     font-weight: 800;
-    cursor: default;
+    cursor: pointer;
     padding: 0 1em;
 }
 
@@ -29,6 +29,16 @@ nav {
 
 .btn {
     background-color: #326380;
+}
+
+.inside-crumbs {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.inside-crumbs .breadcrumb, .inside-crumbs .breadcrumb:before {
+    color: #333;
 }
 
 .login__form {
