@@ -2,14 +2,15 @@
 
 namespace App\Controllers\Hopital;
 
-use App\Models\User;
+use App\Models\Hospital;
 use App\Controllers\Controller;
 
 class GardesController extends Controller
 {
     public function getOfferList($request,$response, $args)
     {
-        return $this->view->render($response,'hopital/listeoffres.twig');
+        $hospital = Hospital::where('id', $args['hopid'])->first();
+        return $this->view->render($response,'hopital/listeoffres.twig', [ 'hopital' => $hospital ]);
     }
 
     public function getOffer($request,$response,$args)
@@ -19,7 +20,8 @@ class GardesController extends Controller
 
     public function getGardesList($request,$response,$args)
     {
-        return $this->view->render($response,'hopital/listegardes.twig');
+        $hospital = Hospital::where('id', $args['hopid'])->first();
+        return $this->view->render($response,'hopital/listegardes.twig', [ 'hopital' => $hospital ]);
     }
 
 }
