@@ -2,6 +2,84 @@
 
 {% block content %}
 
+    <div class="row">
+    <h5 class="col s5">Détails de l'offre</h5>
+        <h5 class="col offset-s1 s6">Accepter l'offre</h5>
+    </div>
 
+    <div class="row">
+    <table class="bordered striped col s5">
+        <tr>
+            <td><b>Hôpital: </b></td>
+            <td>Saint-Pierre</tr></td>
+        </tr>
+        <tr>
+            <td><b>Jour: </b></td>
+            <td>02/06/2016</tr></td>
+        </tr>
+        <tr>
+            <td><b>Type: </b></td>
+            <td>Echange</tr></td>
+        </tr>
+        <tr>
+            <td><b>Stagiaire: </b></td>
+            <td>Marcel Proust</tr></td>
+        </tr>
+        <tr>
+            <td><b>Raison: </b></td>
+            <td>J'ai mon cours de cuisine le lendemain</tr></td>
+        </tr>
+    </table>
+
+        {# ne montrer que si possible d'accepter l'offre ! #}
+        <table class="col offset-s1 s6">
+            <tr>
+                {# ne montrer que si offre d'échange !#}
+                <td><label for="jour">Jour</label><input placeholder="Jour" id="jour" type="text" class="validate"></td>
+            </tr>
+            <tr>
+                {# ne montrer que si offre d'échange !#}
+                <td><label for="poste">Poste</label><input placeholder="Poste" id="poste" type="text" class="validate"></td>
+            </tr>
+            <tr>
+                <td><a class="waves-effect waves-light btn">Accepter</a></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="row">
+        <div class= "col s12">
+            <h5>Commentaires</h5>
+            <table class="bordered responsive-table">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Stagiaire</th>
+                    <th>Commentaire</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>13/06/2017 05h56</td>
+                    <td>Jacques Dugland</td>
+                    <td>55€ + récup</td>
+                </tr>
+                <tr>
+                    <td>13/06/2017 05h38</td>
+                    <td>Jack Beauregard</td>
+                    <td>C'est payé combien cette garde ?</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <form class="row">
+        <br>
+        <label for="commentaire">Votre commentaire</label>
+        <textarea id="commentaire" class="materialize-textarea"></textarea>
+        <a class="waves-effect waves-light btn">Envoyer le commentaire</a>
+    </form>
 
 {% endblock %}
