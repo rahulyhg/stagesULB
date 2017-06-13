@@ -16,4 +16,10 @@ class GardesController extends Controller
     {
         return $this->view->render($response,'hopital/offre.twig');
     }
+
+    public function getGardesList($request,$response,$args)
+    {
+        return $this->view->render($response,'hopital/listegardes.twig');
+    }
+
 }
