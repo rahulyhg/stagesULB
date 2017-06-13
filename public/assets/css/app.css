@@ -12,6 +12,10 @@ nav {
     background-color: #129cda;
 }
 
+.primary {
+    margin-top: 3em;
+}
+
 .nav__username {
     font-weight: 800;
     cursor: default;
@@ -25,6 +29,10 @@ nav {
 
 .btn {
     background-color: #326380;
+}
+
+.login__form {
+    margin-top: 5em;
 }
 
 @media (min-width: 991px){
