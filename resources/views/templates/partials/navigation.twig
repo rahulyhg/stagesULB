@@ -2,10 +2,14 @@
     <div class="nav-wrapper">
         <a href="{{ path_for('home') }}" class="brand-logo">Stages</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse" title="Menu mobile"><i class="material-icons">menu</i></a>
+        {% if auth.check %}
+        <ul class="right">
+            <li><a href="#" data-activates="slide-out" class="button-collapse hospital" title="Hôpitaux"><span class="icon-hospital big"></span></a>
+            </li>
+        </ul>
+        {% endif %}
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             {% if auth.check %}
-                <li><a href="#" data-activates="slide-out" class="button-collapse hospital" title="Hôpitaux"><span class="icon-hospital big"></span></a>
-                </li>
                 <li class="nav__username"><a href="{{ path_for('user.profil') }}" title="Mon compte">Georges Dubreuil</a>
                 </li>
                 <li><a href="{{ path_for('auth.signout') }}" title="Déconnexion">Déconnexion</a></li>
