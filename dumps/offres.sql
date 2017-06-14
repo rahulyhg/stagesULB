@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `offres_echange`
 --
 
-CREATE TABLE `offres_echange` (
+CREATE TABLE `offres` (
   `id` bigint(20) NOT NULL,
   `hospital_id` bigint(20) NOT NULL,
   `etus_id` bigint(20) NOT NULL,

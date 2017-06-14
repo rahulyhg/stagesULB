@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Offres extends Model
 {
-    protected $table = 'offres_echange';
+    protected $table = 'offres';
 
     protected $fillable = [
         'hospital_id',
