@@ -4,7 +4,7 @@
     <nav class="inside-crumbs">
         <div class="nav-wrapper">
             <div class="col s12">
-                <a href="{{ base_url() }}/hopital/{{ hopital.id }}/infos" class="breadcrumb"><span class="icon-hospital little"></span> {{ hopital.nom }}</a>
+                <a href="{{ base_url() }}/hopital/{{ infos.hospital.id }}/infos" class="breadcrumb"><span class="icon-hospital little"></span> {{ infos.hospital.nom }}</a>
                 <a href="#" class="breadcrumb">Informations</a>
             </div>
         </div>
@@ -13,8 +13,8 @@
         <div class="col s12">
             <h5>Choix de garde</h5>
             <blockquote>
-                Date: <b>28/06/2017 09h00</b>
-                <br>Lieu: <b>Auditoire O</b>
+                Date: <b>{{ infos.date }}</b>
+                <br>Lieu: <b>{{ infos.lieu }}</b>
             </blockquote>
         </div>
     </div>
@@ -23,10 +23,7 @@
         <div class="col s12">
             <h5>Infos générales</h5>
             <blockquote>
-                Caution: 50€
-                <br>Où se présenter: secrétariat de votre service
-                <br>Badges: le mardi de 11h à 12h30 et le vendredi de 11h à 12h30
-                <br>Lingerie: temporaire le lundi, activée le mardi
+                {{ infos.general | raw }}
             </blockquote>
             <a class="waves-effect waves-light btn">Modifier</a>
         </div>
