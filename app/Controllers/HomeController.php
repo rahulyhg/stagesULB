@@ -2,12 +2,13 @@
 
 namespace App\Controllers;
 
-use App\Models\User;
+use App\Models\Notifications;
 
 class HomeController extends Controller
 {
 	public function index($request,$response)
 	{
-		return $this->view->render($response,'home.twig');
+	    $notifications = Notifications::with('hospital')->get();
+		return $this->view->render($response,'home.twig', ['notifications' => $notifications]);
 	}
 }

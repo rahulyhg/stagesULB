@@ -80,26 +80,13 @@
                 </thead>
 
                 <tbody>
-                <tr>
-                    <td>Saint-Pierre</td>
-                    <td>13/06/2017 00h15</td>
-                    <td>Michel Sapin a repris la garde de Cécile Duflot du 26/06/2017 au poste Porte</td>
-                </tr>
-                <tr class="amber darken-3 white-text">
-                    <td>Erasme</td>
-                    <td>13/06/2017 00h15</td>
-                    <td>Prochain choix de garde le 12/06/2017 à 8h30 à l'auditoire O</td>
-                </tr>
-                <tr>
-                    <td>Saint-Pierre</td>
-                    <td>12/06/2017 16h15</td>
-                    <td>Cécile Duflot offre sa garde du 26/06/2017 au poste Porte</td>
-                </tr>
-                <tr class="light-blue lighten-4">
-                    <td>Ambroise Paré</td>
-                    <td>13/06/2017 00h15</td>
-                    <td>Le choix de garde du 26/06/2017 au 23/07/2017 a été mis en ligne</td>
-                </tr>
+                {% for notification in notifications %}
+                    <tr class="{{ notification.type }}">
+                        <td>{{ notification.hospital.nom }}</td>
+                        <td>{{ notification.date }}</td>
+                        <td>{{ notification.message }}</td>
+                    </tr>
+                {% endfor %}
                 </tbody>
             </table>
             <ul class="pagination right-align">

@@ -14,4 +14,9 @@ class Hospital extends Model
     protected $fillable = [
         'nom'
     ];
+
+    public function notifications()
+    {
+        return $this->hasMany('App\Models\Notifications');
+    }
 }
