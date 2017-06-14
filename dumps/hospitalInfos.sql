@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mer. 14 juin 2017 à 21:48
+-- Généré le :  mer. 14 juin 2017 à 22:01
 -- Version du serveur :  5.7.18
 -- Version de PHP :  7.0.18
 
@@ -37,6 +37,17 @@ CREATE TABLE `hospitalInfos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Déchargement des données de la table `hospitalInfos`
+--
+
+INSERT INTO `hospitalInfos` (`date`, `lieu`, `general`, `id`, `hospital_id`) VALUES
+('28/06/2017 09h00 ', 'Auditoire O', '<p><b>Caution</b> : 50€</p>\r\n<p><b>Où se présenter</b> : secrétariat de votre service </p>\r\n<p><b>Badges</b> : le mardi de 11h à 12h30 et le vendredi de 11h à 12h30</p> \r\n<p><b>Lingerie</b> : temporaire le lundi, activée le mardi</p>', 1, 1),
+('39/06/2017 19h00 ', 'Au fond du trou', 'Je chantais gaiement dans le bois et l\'accueil apparut', 2, 2),
+('20/08/2017 28h', 'Tour Eiffel', 'Promenons nous dans les bois\r\nPromenons nous dans les bois\r\nPromenons nous dans les bois\r\nPromenons nous dans les bois\r\n<h3>Promenons nous dans les bois</h3>', 3, 3),
+('21/08/2017 28h', 'Plage du Castel', 'Promenons nous dans les bois et les prés\r\n<h3>Promenons nous dans les prés</h3>', 4, 4),
+('29/08/2018 27h', 'St Roman de Bellet', '<h3>Promenons nous dans les ....</h3>', 5, 5);
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -55,7 +66,7 @@ ALTER TABLE `hospitalInfos`
 -- AUTO_INCREMENT pour la table `hospitalInfos`
 --
 ALTER TABLE `hospitalInfos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Contraintes pour les tables déchargées
 --
