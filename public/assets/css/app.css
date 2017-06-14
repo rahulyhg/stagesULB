@@ -118,12 +118,6 @@ nav {
     cursor: pointer;
 }
 
-.nextgarde {
-    position: absolute;
-    right: 1em;
-    margin-top: 7px;
-}
-
 .hospital {
     display: block !important;
 }
@@ -154,7 +148,16 @@ tr.red.darken-3 {
     margin-top: 5em;
 }
 
+.nextgarde {
+    height: auto;
+}
+
 @media (min-width: 991px){
+    .nextgarde {
+        position: absolute;
+        right: 1em;
+        margin-top: 7px;
+    }
     .brand-logo {
         margin-left: .5em;
     }
