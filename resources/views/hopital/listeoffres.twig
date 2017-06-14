@@ -4,12 +4,12 @@
     <nav class="inside-crumbs">
         <div class="nav-wrapper">
             <div class="col s12">
-                <a href="#!" class="breadcrumb"><span class="icon-hospital little"></span> {{ hopital.nom }}</a>
-                <a href="#!" class="breadcrumb">Échanges</a>
+                <a href="{{ base_url() }}/hopital/{{ hopital.id }}/infos" class="breadcrumb"><span class="icon-hospital little"></span> {{ hopital.nom }}</a>
+                <a href="#" class="breadcrumb">Échanges</a>
             </div>
         </div>
     </nav>
-    <h5>Echanges disponibles</h5>
+    <h5>Disponibles</h5>
 
     <table class="bordered responsive-table">
         <thead>
@@ -44,7 +44,7 @@
     </table>
     <br>
 
-    <h5>Echanges passés</h5>
+    <h5>Passés</h5>
     <table class="bordered responsive-table">
         <thead>
         <tr>

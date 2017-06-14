@@ -4,8 +4,8 @@
     <nav class="inside-crumbs">
         <div class="nav-wrapper">
             <div class="col s12">
-                <a href="#!" class="breadcrumb"><span class="icon-hospital little"></span> {{ hopital.nom }}</a>
-                <a href="#!" class="breadcrumb">Informations</a>
+                <a href="{{ base_url() }}/hopital/{{ hopital.id }}/infos" class="breadcrumb"><span class="icon-hospital little"></span> {{ hopital.nom }}</a>
+                <a href="#" class="breadcrumb">Informations</a>
             </div>
         </div>
     </nav>

@@ -140,6 +140,10 @@ nav {
     color: #333;
 }
 
+table .material-icons {
+    display: none;
+}
+
 .btn-periodes {
     margin-top: 10px;
 }
@@ -153,6 +157,10 @@ nav {
 }
 
 @media (min-width: 991px){
+    table .material-icons {
+        display: inline-block;
+    }
+
     .nextgarde {
         position: absolute;
         right: 1em;

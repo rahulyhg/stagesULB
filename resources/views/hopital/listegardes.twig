@@ -6,8 +6,8 @@
             <nav class="inside-crumbs">
                 <div class="nav-wrapper">
                     <div class="col s12">
-                        <a href="#!" class="breadcrumb"><span class="icon-hospital little"></span> {{ hopital.nom }}</a>
-                        <a href="#!" class="breadcrumb">Liste des gardes</a>
+                        <a href="{{ base_url() }}/hopital/{{ hopital.id }}/infos" class="breadcrumb"><span class="icon-hospital little"></span> {{ hopital.nom }}</a>
+                        <a href="#" class="breadcrumb">Liste des gardes</a>
                     </div>
                 </div>
             </nav>
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <h5 class="center-align">Période 12/06/2017 - 02/07/2017</h5>
+    <h5 id="currentPeriod" class="center-align">12/06/2017 - 02/07/2017</h5>
     <table class="responsive-table">
         <thead>
         <tr>
