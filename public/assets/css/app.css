@@ -140,6 +140,10 @@ nav {
     color: #333;
 }
 
+.btn-periodes {
+    margin-top: 10px;
+}
+
 .login__form {
     margin-top: 5em;
 }
