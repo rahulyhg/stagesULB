@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 14 Juin 2017 à 21:10
+-- Généré le :  Mer 14 Juin 2017 à 22:22
 -- Version du serveur :  5.7.14
 -- Version de PHP :  7.0.10
 
@@ -35,6 +35,14 @@ CREATE TABLE `notifications` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Contenu de la table `notifications`
+--
+
+INSERT INTO `notifications` (`id`, `hospital_id`, `date`, `message`, `type`) VALUES
+(1, 1, '15/05/2017 00h19', 'Michel Sapin a repris la garde de Cécile Duflot du 26/06/2017 au poste Porte', 1),
+(2, 2, '15/06/2017 00h10', 'Prochain choix de garde le 12/06/2017 à 8h30 à l\'auditoire O<', 2);
+
+--
 -- Index pour les tables exportées
 --
 
@@ -42,7 +50,8 @@ CREATE TABLE `notifications` (
 -- Index pour la table `notifications`
 --
 ALTER TABLE `notifications`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `hospital_id` (`hospital_id`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -52,7 +61,17 @@ ALTER TABLE `notifications`
 -- AUTO_INCREMENT pour la table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `notifications`
+--
+ALTER TABLE `notifications`
+  ADD CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`id`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

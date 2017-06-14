@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `offres_echange`
+-- Structure de la table `offres`
 --
 
 CREATE TABLE `offres` (
@@ -41,9 +41,9 @@ CREATE TABLE `offres` (
 --
 
 --
--- Index pour la table `offres_echange`
+-- Index pour la table `offres`
 --
-ALTER TABLE `offres_echange`
+ALTER TABLE `offres`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -51,9 +51,9 @@ ALTER TABLE `offres_echange`
 --
 
 --
--- AUTO_INCREMENT pour la table `offres_echange`
+-- AUTO_INCREMENT pour la table `offres`
 --
-ALTER TABLE `offres_echange`
+ALTER TABLE `offres`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
