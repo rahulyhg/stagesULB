@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 14 Juin 2017 à 20:54
+-- Généré le :  Mer 14 Juin 2017 à 21:00
 -- Version du serveur :  5.7.14
 -- Version de PHP :  7.0.10
 
@@ -29,8 +29,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `offres_echange` (
   `id` bigint(20) NOT NULL,
   `hospital_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `etus_id` bigint(20) NOT NULL,
   `datetime` varchar(255) NOT NULL,
+  `poste` varchar(255) NOT NULL,
   `commentaire` text NOT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
