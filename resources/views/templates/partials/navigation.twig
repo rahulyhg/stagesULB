@@ -47,7 +47,7 @@
         </ul>
     </li>
 </ul>
-
+{% if auth.check %}
 <script>
     var req = new XMLHttpRequest();
     var rootHospital = document.getElementById('rootHospital');
@@ -82,3 +82,4 @@
     req.open('GET', '{{ base_url() }}/api/hospitalList', true);
     req.send(null);
 </script>
+{% endif %}
