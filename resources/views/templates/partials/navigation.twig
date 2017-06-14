@@ -10,8 +10,7 @@
         {% endif %}
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             {% if auth.check %}
-                <li class="nav__username"><a href="{{ path_for('user.profil') }}" title="Mon compte">Georges Dubreuil</a>
-                </li>
+                <li class="nav__username"><a href="{{ path_for('user.profil') }}" title="Mon compte">Georges Dubreuil</a></li>
                 <li><a href="{{ path_for('auth.signout') }}" title="Déconnexion">Déconnexion</a></li>
             {% else %}
                 <li><a href="{{ path_for('auth.signin') }}" title="Connexion">Connexion</a></li>
@@ -19,9 +18,9 @@
         </ul>
         <ul class="side-nav" id="mobile-demo">
             {% if auth.check %}
-                <li class="nav__username"><a href="{{ path_for('user.profil') }}" title="Mon compte">Georges Dubreuil</a>
+                <li class="nav__username">
+                    <a href="{{ path_for('user.profil') }}" title="Mon compte">Georges Dubreuil</a>
                 </li>
-                <li><a href="{{ path_for('user.profil') }}" title="Mon compte">Mon compte</a></li>
                 <li><a href="{{ path_for('auth.signout') }}" title="Déconnexion">Déconnexion</a></li>
             {% else %}
                 <li><a href="{{ path_for('auth.signin') }}" title="Connexion">Connexion</a></li>
