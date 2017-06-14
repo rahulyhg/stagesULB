@@ -21,9 +21,9 @@ class Propositions extends Model
         'poste'
     ];
 
-    public function hospital()
+    public function offre()
     {
-        return $this->belongsTo('App\Models\Hospital');
+        return $this->belongsTo('App\Models\Offres');
     }
 
     public function etu()
