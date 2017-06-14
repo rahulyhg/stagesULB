@@ -31,7 +31,7 @@ CREATE TABLE `propositions` (
   `offres_id` bigint(20) NOT NULL,
   `etus_id` bigint(20) NOT NULL COMMENT 'id de l''étudiant qui fait le proposition et non de celui qui fait l''offres (cf offres_id)',
   `type` int(11) NOT NULL,
-  `datetime` varchar(255) NOT NULL,
+  `date` varchar(255) NOT NULL,
   `commentaire` varchar(255) NOT NULL,
   `statut` int(11) NOT NULL,
   `poste` varchar(255) DEFAULT NULL COMMENT 'attribué seulement si c''est un échange et non une reprise'

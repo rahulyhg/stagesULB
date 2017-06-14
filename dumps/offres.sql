@@ -30,7 +30,7 @@ CREATE TABLE `offres` (
   `id` bigint(20) NOT NULL,
   `hospital_id` bigint(20) NOT NULL,
   `etus_id` bigint(20) NOT NULL,
-  `datetime` varchar(255) NOT NULL,
+  `date` varchar(255) NOT NULL,
   `poste` varchar(255) NOT NULL,
   `commentaire` text NOT NULL,
   `status` int(11) NOT NULL
