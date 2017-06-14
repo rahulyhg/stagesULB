@@ -80,7 +80,7 @@
 
                 <tbody>
                 {% for notification in notifications %}
-                    <tr class="{{ notification.type }}">
+                    <tr class="notif__color--{{ notification.type }}">
                         <td>{{ notification.hospital.nom }}</td>
                         <td>{{ notification.date }}</td>
                         <td>{{ notification.message }}</td>
