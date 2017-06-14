@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 14 Juin 2017 à 21:00
+-- Généré le :  Mer 14 Juin 2017 à 21:49
 -- Version du serveur :  5.7.14
 -- Version de PHP :  7.0.10
 
@@ -23,17 +23,18 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `offres_echange`
+-- Structure de la table `propositions`
 --
 
-CREATE TABLE `offres` (
+CREATE TABLE `propositions` (
   `id` bigint(20) NOT NULL,
-  `hospital_id` bigint(20) NOT NULL,
-  `etus_id` bigint(20) NOT NULL,
+  `offres_id` bigint(20) NOT NULL,
+  `etus_id` bigint(20) NOT NULL COMMENT 'id de l''étudiant qui fait le proposition et non de celui qui fait l''offres (cf offres_id)',
+  `type` int(11) NOT NULL,
   `date` varchar(255) NOT NULL,
-  `poste` varchar(255) NOT NULL,
-  `commentaire` text NOT NULL,
-  `status` int(11) NOT NULL
+  `commentaire` varchar(255) NOT NULL,
+  `statut` int(11) NOT NULL,
+  `poste` varchar(255) DEFAULT NULL COMMENT 'attribué seulement si c''est un échange et non une reprise'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -41,9 +42,9 @@ CREATE TABLE `offres` (
 --
 
 --
--- Index pour la table `offres_echange`
+-- Index pour la table `propositions`
 --
-ALTER TABLE `offres_echange`
+ALTER TABLE `propositions`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -51,9 +52,9 @@ ALTER TABLE `offres_echange`
 --
 
 --
--- AUTO_INCREMENT pour la table `offres_echange`
+-- AUTO_INCREMENT pour la table `propositions`
 --
-ALTER TABLE `offres_echange`
+ALTER TABLE `propositions`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
