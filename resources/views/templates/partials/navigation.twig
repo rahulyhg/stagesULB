@@ -2,35 +2,32 @@
     <div class="nav-wrapper">
         <a href="{{ path_for('home') }}" class="brand-logo">Stages</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse" title="Menu mobile"><i class="material-icons">menu</i></a>
-        {% if auth.check %}
-            <a href="#" data-activates="slide-out" class="button-collapse hospital right" title="Hôpitaux"><i class="material-icons">business</i></a>
-        {% endif %}
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             {% if auth.check %}
-                <li class="nav__username"><a href="{{ path_for('user.profil') }}" title="Profil">Georges Dubreuil</a>
+                <li><a href="#" data-activates="slide-out" class="button-collapse hospital" title="Hôpitaux"><span class="icon-hospital big"></span></a>
                 </li>
-                <li><a href="{{ path_for('auth.signout') }}">Déconnexion</a></li>
+                <li class="nav__username"><a href="{{ path_for('user.profil') }}" title="Mon compte">Georges Dubreuil</a>
+                </li>
+                <li><a href="{{ path_for('auth.signout') }}" title="Déconnexion">Déconnexion</a></li>
             {% else %}
-                <li><a href="{{ path_for('auth.signin') }}">Connexion</a></li>
-                <!--<li><a href="">Inscription</a></li>-->
+                <li><a href="{{ path_for('auth.signin') }}" title="Connexion">Connexion</a></li>
             {% endif %}
         </ul>
         <ul class="side-nav" id="mobile-demo">
             {% if auth.check %}
-                <li class="nav__username"><a href="{{ path_for('user.profil') }}" title="Profil">Georges Dubreuil</a>
+                <li class="nav__username"><a href="{{ path_for('user.profil') }}" title="Mon compte">Georges Dubreuil</a>
                 </li>
-                <li><a href="{{ path_for('user.profil') }}">Profil</a></li>
-                <li><a href="{{ path_for('auth.signout') }}">Déconnexion</a></li>
+                <li><a href="{{ path_for('user.profil') }}" title="Mon compte">Mon compte</a></li>
+                <li><a href="{{ path_for('auth.signout') }}" title="Déconnexion">Déconnexion</a></li>
             {% else %}
-                <li><a href="{{ path_for('auth.signin') }}">Connexion</a></li>
-                <!--<li><a href="">Inscription</a></li>-->
+                <li><a href="{{ path_for('auth.signin') }}" title="Connexion">Connexion</a></li>
             {% endif %}
         </ul>
     </div>
 </nav>
 
 <ul id="slide-out" class="side-nav">
-    <li><a class="subheader"><i class="material-icons">business</i> Hôpitaux</a></li>
+    <li><a class="subheader"><span class="icon-hospital little"></span> Hôpitaux</a></li>
     <li id="rootHospital" class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li>
