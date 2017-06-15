@@ -14,7 +14,6 @@ class Offres extends Model
     protected $fillable = [
         'hospital_id',
         'user_id',
-        'date',
         'poste',
         'commentaire',
         'statut'

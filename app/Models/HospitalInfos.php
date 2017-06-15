@@ -12,8 +12,8 @@ class HospitalInfos extends Model
     protected $table = 'hospitalInfos';
 
     protected $fillable = [
-        'date',
-        'lieu',
+        'choixgarde_date',
+        'choixgarde_lieu',
         'general',
         'type'
     ];

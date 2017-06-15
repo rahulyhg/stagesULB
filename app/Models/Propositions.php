@@ -15,7 +15,6 @@ class Propositions extends Model
         'offres_id',
         'etus_id',
         'type',
-        'date',
         'commentaire',
         'statut',
         'poste'

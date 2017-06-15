@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 14 Juin 2017 à 22:22
+-- Généré le :  Jeu 15 Juin 2017 à 20:11
 -- Version du serveur :  5.7.14
 -- Version de PHP :  7.0.10
 
@@ -29,18 +29,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `notifications` (
   `id` bigint(20) NOT NULL,
   `hospital_id` bigint(20) NOT NULL,
-  `date` varchar(255) NOT NULL,
   `message` varchar(255) NOT NULL,
-  `type` int(11) NOT NULL
+  `type` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL,
+  `updated_at` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `notifications`
 --
 
-INSERT INTO `notifications` (`id`, `hospital_id`, `date`, `message`, `type`) VALUES
-(1, 1, '15/05/2017 00h19', 'Michel Sapin a repris la garde de Cécile Duflot du 26/06/2017 au poste Porte', 1),
-(2, 2, '15/06/2017 00h10', 'Prochain choix de garde le 12/06/2017 à 8h30 à l\'auditoire O<', 2);
+INSERT INTO `notifications` (`id`, `hospital_id`, `message`, `type`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Michel Sapin a repris la garde de Cécile Duflot du 26/06/2017 au poste Porte', 1, '2017-06-15 20:11:44', '2017-06-15 20:11:44'),
+(2, 2, 'Prochain choix de garde le 12/06/2017 à 8h30 à l\'auditoire O<', 2, '2017-06-15 20:11:44', '2017-06-15 20:11:44');
 
 --
 -- Index pour les tables exportées

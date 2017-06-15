@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  mer. 14 juin 2017 à 22:01
--- Version du serveur :  5.7.18
--- Version de PHP :  7.0.18
+-- Client :  127.0.0.1
+-- Généré le :  Jeu 15 Juin 2017 à 20:42
+-- Version du serveur :  5.7.14
+-- Version de PHP :  7.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -25,58 +23,59 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `hospitalInfos`
+-- Structure de la table `hospitalinfos`
 --
 
-CREATE TABLE `hospitalInfos` (
-  `date` varchar(255) NOT NULL,
-  `lieu` varchar(255) NOT NULL,
+CREATE TABLE `hospitalinfos` (
+  `choixgarde_date` varchar(255) NOT NULL,
+  `choixgarde_lieu` varchar(255) NOT NULL,
   `general` longtext NOT NULL,
   `id` int(11) NOT NULL,
-  `hospital_id` bigint(20) NOT NULL
+  `hospital_id` bigint(20) NOT NULL,
+  `created_at` timestamp NOT NULL,
+  `updated_at` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `hospitalInfos`
+-- Contenu de la table `hospitalinfos`
 --
 
-INSERT INTO `hospitalInfos` (`date`, `lieu`, `general`, `id`, `hospital_id`) VALUES
-('28/06/2017 09h00 ', 'Auditoire O', '<p><b>Caution</b> : 50€</p>\r\n<p><b>Où se présenter</b> : secrétariat de votre service </p>\r\n<p><b>Badges</b> : le mardi de 11h à 12h30 et le vendredi de 11h à 12h30</p> \r\n<p><b>Lingerie</b> : temporaire le lundi, activée le mardi</p>', 1, 1),
-('39/06/2017 19h00 ', 'Au fond du trou', 'Je chantais gaiement dans le bois et l\'accueil apparut', 2, 2),
-('20/08/2017 28h', 'Tour Eiffel', 'Promenons nous dans les bois\r\nPromenons nous dans les bois\r\nPromenons nous dans les bois\r\nPromenons nous dans les bois\r\n<h3>Promenons nous dans les bois</h3>', 3, 3),
-('21/08/2017 28h', 'Plage du Castel', 'Promenons nous dans les bois et les prés\r\n<h3>Promenons nous dans les prés</h3>', 4, 4),
-('29/08/2018 27h', 'St Roman de Bellet', '<h3>Promenons nous dans les ....</h3>', 5, 5);
+INSERT INTO `hospitalinfos` (`choixgarde_date`, `choixgarde_lieu`, `general`, `id`, `hospital_id`, `created_at`, `updated_at`) VALUES
+('15/06/2017 à 9h30', 'Auditoire O', '<p><b>Caution</b> : 50€</p>\r\n<p><b>Où se présenter</b> : secrétariat de votre service </p>\r\n<p><b>Badges</b> : le mardi de 11h à 12h30 et le vendredi de 11h à 12h30</p> \r\n<p><b>Lingerie</b> : temporaire le lundi, activée le mardi</p>', 1, 1, '2017-06-15 20:42:42', '2017-06-15 20:42:42'),
+('15/06/2017 à 9h30', 'Au fond du trou', 'Je chantais gaiement dans le bois et l\'accueil apparut', 2, 2, '2017-06-15 20:42:42', '2017-06-15 20:42:42'),
+('Après la visite', 'Tour Eiffel', 'Promenons nous dans les bois\r\nPromenons nous dans les bois\r\nPromenons nous dans les bois\r\nPromenons nous dans les bois\r\n<h3>Promenons nous dans les bois</h3>', 3, 3, '2017-06-15 20:42:42', '2017-06-15 20:42:42'),
+('15/06/2017 à 9h30', 'Plage du Castel', 'Promenons nous dans les bois et les prés\r\n<h3>Promenons nous dans les prés</h3>', 4, 4, '2017-06-15 20:42:42', '2017-06-15 20:42:42'),
+('15/06/2017 à 9h30', 'St Roman de Bellet', '<h3>Promenons nous dans les ....</h3>', 5, 5, '2017-06-15 20:42:42', '2017-06-15 20:42:42');
 
 --
--- Index pour les tables déchargées
+-- Index pour les tables exportées
 --
 
 --
--- Index pour la table `hospitalInfos`
+-- Index pour la table `hospitalinfos`
 --
-ALTER TABLE `hospitalInfos`
+ALTER TABLE `hospitalinfos`
   ADD PRIMARY KEY (`id`),
   ADD KEY `hospital_id` (`hospital_id`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT pour la table `hospitalInfos`
+-- AUTO_INCREMENT pour la table `hospitalinfos`
 --
-ALTER TABLE `hospitalInfos`
+ALTER TABLE `hospitalinfos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- Contraintes pour les tables déchargées
+-- Contraintes pour les tables exportées
 --
 
 --
--- Contraintes pour la table `hospitalInfos`
+-- Contraintes pour la table `hospitalinfos`
 --
-ALTER TABLE `hospitalInfos`
+ALTER TABLE `hospitalinfos`
   ADD CONSTRAINT `hospitalinfos_ibfk_1` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`id`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
