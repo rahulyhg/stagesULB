@@ -29,7 +29,7 @@ class Avis extends Model
         return $this->belongsTo('App\Models\Etus');
     }
 
-    public function service()
+    public function services()
     {
         return $this->belongsTo('App\Models\Services');
     }
