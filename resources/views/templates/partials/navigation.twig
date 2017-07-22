@@ -11,6 +11,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             {% if auth.check %}
                 <li class="nav__username"><a href="{{ path_for('user.profil') }}" title="Mon compte">Georges Dubreuil</a></li>
+                <li><a href="{{ path_for('viewavis') }}" title="Avis">Avis</a></li>
                 <li><a href="{{ path_for('auth.signout') }}" title="Déconnexion">Déconnexion</a></li>
             {% else %}
                 <li><a href="{{ path_for('auth.signin') }}" title="Connexion">Connexion</a></li>
@@ -21,6 +22,7 @@
                 <li class="nav__username">
                     <a href="{{ path_for('user.profil') }}" title="Mon compte">Georges Dubreuil</a>
                 </li>
+                <li><a href="{{ path_for('viewavis') }}" title="Avis">Avis</a></li>
                 <li><a href="{{ path_for('auth.signout') }}" title="Déconnexion">Déconnexion</a></li>
             {% else %}
                 <li><a href="{{ path_for('auth.signin') }}" title="Connexion">Connexion</a></li>
@@ -41,6 +43,7 @@
                         <li><a class="hospital__gardes" href="">Liste des gardes</a></li>
                         <li><a class="hospital__echanges" href="">Échanges<span
                                         class="badge blue lighten-5">3</span></a></li>
+                        <li><a class="hospital__avis" href="">Avis</a></li>
                     </ul>
                 </div>
             </li>
@@ -64,6 +67,7 @@
                     newElem.querySelector('.hospital__info').href = "/stagesULB/public/hopital/"+hospitals[i].id+"/infos";
                     newElem.querySelector('.hospital__gardes').href = "/stagesULB/public/hopital/"+hospitals[i].id+"/gardes";
                     newElem.querySelector('.hospital__echanges').href = "/stagesULB/public/hopital/"+hospitals[i].id+"/offres";
+                    newElem.querySelector('.hospital__avis').href = "/stagesULB/public/hopital/"+hospitals[i].id+"/avis";
                     ul.appendChild(newElem);
                 }
                 // Regen materialize

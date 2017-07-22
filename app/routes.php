@@ -22,6 +22,8 @@ $app->group('',function () {
     $this->get('/hopital/offre/{offreid}', 'GardesController:getOffer')->setName('hopital.viewoffer');
     $this->get('/hopital/{hopid}/gardes', 'GardesController:getGardesList')->setName('hopital.viewgardes');
     $this->get('/hopital/{hopid}/infos', 'InfosController:getInfos')->setName('hopital.viewinfos');
+    $this->get('/hopital/{hopid}/avis', 'AvisController:getHospitalAvis')->setName('hopital.viewavis');
+    $this->get('/avis', 'AvisController:getAvis')->setName('viewavis');
 
 
     $this->get('/auth/signout','AuthController:getSignOut')->setName('auth.signout');

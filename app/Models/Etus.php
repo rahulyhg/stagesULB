@@ -12,9 +12,11 @@ class Etus extends Model
     protected $table = 'etus';
 
     protected $fillable = [
+        'idUniv',
+        'prenom',
+        'nom',
         'telephone',
         'email',
-        'facebook',
-        //'password'?
+        'facebook'
     ];
 }

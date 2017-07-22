@@ -7,25 +7,30 @@ use Illuminate\Database\Eloquent\Model;
 /**
  *
  */
-class Offres extends Model
+class Etus extends Model
 {
-    protected $table = 'offres';
+    protected $table = 'avis';
 
     protected $fillable = [
         'hospital_id',
         'etus_id',
-        'poste',
+        'services_id',
         'commentaire',
-        'statut'
+        'anonyme'
     ];
 
     public function hospital()
     {
         return $this->belongsTo('App\Models\Hospital');
-    }
+}
 
     public function etu()
     {
         return $this->belongsTo('App\Models\Etus');
+    }
+
+    public function service()
+    {
+        return $this->belongsTo('App\Models\Services');
     }
 }
