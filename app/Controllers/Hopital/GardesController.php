@@ -20,7 +20,7 @@ class GardesController extends Controller
 
     public function getGardesList($request,$response,$args)
     {
-        $hospital = Hospital::where('id', $args['hopid'])->first();
+        $hospital = Hospital::where('id', $args['hopid'])->first(); // TODO: fix that !!!!!!!
         return $this->view->render($response,'hopital/listegardes.twig', [ 'hopital' => $hospital ]);
     }
 

@@ -79,7 +79,7 @@ $container['GardesController'] = function($container) {
 };
 
 $container['AvisController'] = function($container) {
-    return new \App\Controllers\Hopital\AvisController($container);
+    return new \App\Controllers\AvisController($container);
 };
 
 $container['InfosController'] = function($container) {

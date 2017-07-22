@@ -1,6 +1,35 @@
 {% extends 'templates/app.twig' %}
 
 {% block content %}
-    TODO: avis sur tous les hôpitaux // utiliser un modèle comment avec /hopital/avis.twig ?
+
+    Rajouter ici: tri par service, par hôpital et par les deux
+
+    <table class="bordered highlight responsive-table">
+        <thead>
+        <tr>
+            <th><i class="material-icons">room</i> Hôpital</th>
+            <th><i class="material-icons">info</i> Service</th>
+            <th><i class="material-icons">assignment</i> Date</th>
+            <th><i class="material-icons">chat</i> Commentaire</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for avis in avisList %}
+            <tr>
+                <td>{{ avis.hospital.nom }}</td>
+                <td>{{ avis.service.nom }}</td>
+                <td>{{ avis.created_at }}</td>
+                <td>{{ avis.commentaire }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul class="pagination right-align">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
 
 {% endblock %}

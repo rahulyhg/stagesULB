@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  *
  */
-class Etus extends Model
+class Avis extends Model
 {
     protected $table = 'avis';
 
@@ -22,7 +22,7 @@ class Etus extends Model
     public function hospital()
     {
         return $this->belongsTo('App\Models\Hospital');
-}
+    }
 
     public function etu()
     {
